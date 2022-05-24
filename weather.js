@@ -9,12 +9,16 @@ buttonEventListener()
 async function weatherAPI(location){
     const re = /^\d/
     if (re.test(location)){
-        result = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${location}&appid=${apiKey}&units=imperial`)
+        resultSimple = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${location}&appid=${apiKey}&units=imperial`)
         }else{
-            result = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=imperial`)
+            resultSimple = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=imperial`)
         }
-    console.log(result)
-    const data = await result.json()
+    const data = await resultSimple.json()
+    const lat = data.coord.lat
+    const lon = data.coord.lon
+
+    const resultComplex = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${apiKey}&units=imperial`)
+    const data2 = await resultComplex.json()
 
     let city = document.getElementsByTagName('h2')[0]
     city.innerText = data.name
@@ -68,10 +72,10 @@ async function weatherAPI(location){
     feels.innerText = Math.round(data.main.feels_like) + '\u00B0'
     
     let high = document.getElementById('high')
-    high.innerText = Math.round(data.main.temp_max) + '\u00B0'
+    high.innerText = Math.round(data2.daily[0].temp.max) + '\u00B0'
     
     let low = document.getElementById('low')
-    low.innerText = Math.round(data.main.temp_min) + '\u00B0'
+    low.innerText = Math.round(data2.daily[0].temp.min) + '\u00B0'
 
     let directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     let direction = directions[Math.round(parseInt(data.wind.deg)/45) % 8];

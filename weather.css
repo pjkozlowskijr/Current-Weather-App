@@ -1,7 +1,12 @@
+body{
+    background-color: #343633;
+}
+
 h1{
     text-align: center;
     margin-top: 5vh;
     margin-bottom: 3vh;
+    color: white;
 }
 
 form{
@@ -11,6 +16,7 @@ form{
 
 .form-label{
     margin: 0;
+    color: white;
 }
 
 .form-control{
@@ -20,6 +26,8 @@ form{
 .card{
     width: 50vw;
     margin: auto;
+    border: 1px solid black;
+    background-color: #d3d4d9;
 }
 
 h3{
