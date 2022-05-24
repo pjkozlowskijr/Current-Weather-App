@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./weather.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Patrick's Weather Service</h1>
+    <form>
+        <label for="location" class="form-label">City or Zipcode</label>
+        <input type="text" name="location" class="form-control">
+        <button class="btn btn-primary form-control">Get Weather</button>
+    </form>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4 p-2">
+                <h3>Weather Loading...</h3>
+                <img src="https://media0.giphy.com/media/2vqaiPr1TrevmxCPUV/giphy.gif" class="rounded" id="weather_pic" alt="" style="object-position: 50% 90%">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body p-2">
+                    <h2 class="card-title">Anytown</h2>
+                    <table>
+                        <tr>
+                            <th>Current</th>
+                            <td id="current">Hot as F***</td>
+                            <th>Wind</th>
+                            <td id="wind">None</td>
+                        </tr>
+                        <tr>
+                            <th>Feels Like</th>
+                            <td id="feels">Hell</td>
+                            <th>Humidity</th>
+                            <td id="humidity">110%</td>
+                        </tr>
+                        <tr>
+                            <th>High</th>
+                            <td id="high">Scorching</td>
+                            <th>Pressure</th>
+                            <td id="pressure">Feeling It</td>
+                        </tr>
+                        <tr>
+                            <th>Low</th>
+                            <td id="low">Sultry</td>
+                            <th>Visibility</th>
+                            <td id="vis">Sweat in Eyes</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- My JS -->
+    <script src="./weather.js"></script>
+</body>
+</html>
