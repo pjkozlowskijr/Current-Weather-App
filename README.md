@@ -1,13 +1,13 @@
 <div align="center">
   <img src="https://i.giphy.com/media/McZdU5M5jpkmk/giphy.webp" height="200">
-  <h1 style="border-bottom: none">Patrick's Weather Service</h1>
+  <h1 style="border-bottom: none">Weather Service</h1>
 </div>
 
 ### About This Project
 
-Patrick's Weather Service allows users to lookup the current weather in any city or zipcode. It utilizes the OpenWeather API to gather the current weather data. This is one of my first experiences working with JavaScript. One challenge to overcome for this project was using regex to determine if the user input was a city or zipcode as the data came from different sources. The regex tested to see if the user input started with a digit, in which case the API would route to the zipcode source, and if not, it would route to the city source.
+Weather Service allows users to lookup the current weather in any city or zipcode. It utilizes the OpenWeather API to gather the current weather data. This is one of my first experiences working with JavaScript. One challenge to overcome for this project was using regex to determine if the user input was a city or zipcode as the data came from different sources. The regex tested to see if the user input started with a digit, in which case the API would route to the zipcode source, and if not, it would route to the city source.
 
-Give it a try at [https://pjkozlowskijr.github.io/Current-Weather-App/](https://pjkozlowskijr.github.io/Current-Weather-App/).
+Give it a try at [https://pjkozlowskijr.github.io/Weather-Service/](https://pjkozlowskijr.github.io/Weather-Service/).
 
 ### Languages & Tools Used
 
